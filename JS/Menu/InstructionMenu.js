@@ -32,5 +32,9 @@ class InstructionMenu extends GameScene{
         addInstruction.addLongPressEvent(AddHint);
         addInstruction.addClickEvent(AddHint);
         this.addComponent(addInstruction,-1);
+        var return_button= Button.getButton('return',50,100,1,3,'return');
+        return_button.addClickEvent(new ReturnEvent());
+        this.addComponent(return_button,-1);
+        
     }
 }

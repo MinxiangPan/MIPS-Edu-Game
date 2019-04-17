@@ -43,7 +43,7 @@ class Game {
 
     }
     getCurrentScene() {
-        return this.game_scenes[this.game_scenes.length - 1];
+        return this.game_scenes[this.current_scene - 1];
     }
     /**
      * start draw game scene
@@ -62,7 +62,7 @@ class Game {
         }, this.FPS);
     }
     addScene(scene) {
-
+        this.current_scene++;
         this.game_scenes.push(scene);
 
     }
